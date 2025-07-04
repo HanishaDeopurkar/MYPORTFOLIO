@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Hanisha Deopurkar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    :root {
+      --primary: #14036b;
+      --secondary: #ff7a00;
+      --accent: #b22222;
+      --dark: #111;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background-color: #fff;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-flex {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: var(--primary);
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    
+    .about-container {
+      display: flex;
+      align-items: center;
+      padding: 5% 10%;
+      min-height: 80vh;
+      gap: 4rem;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h1 {
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content h2 {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill-chip {
+      background: var(--light);
+      color: var(--primary);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .about-animation {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .skills {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      .about-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-flex">
+        <lottie-player
+          src="Animation - 1751623756269.json"
+          background="transparent"
+          speed="1"
+          style="width: 80px; height: 80px;"
+          loop
+          autoplay>
+        </lottie-player>
+        <span class="logo-name">Hanisha Deopurkar</span>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-container">
+    <div class="about-content">
+      <h1>About Me</h1>
+      <h2>UI/UX Developer & Designer</h2>
+      <p>
+       I am Hanisha Deopurkar, a second-year Biomedical Engineering student at VIT with a strong interest in the intersection of healthcare and technology. My academic journey is complemented by hands-on experience in designing innovative medical devices that address real-world healthcare challenges.
+
+I have worked on multiple interdisciplinary projects, including an AI-powered Smart Medication Dispenser, a non-invasive heart health monitoring system, and an IoT-enabled portable oxygen concentrator for high-altitude environments. My approach blends biomedical knowledge with embedded systems, AI, and user-focused design.
+
+I am also an active member of BMESI and the FinTech Club's Creative Council, where I contribute to project ideation, content creation, and design. My strengths include creativity, attention to detail, and a strong foundation in medical technology and user-centric product development.
+
+Driven by curiosity and a commitment to making healthcare smarter and more accessible, I aim to pursue a career in biomedical innovation, medical product design, or healthcare technology management.
+      </p>
+      
+      <div class="skills">
+        <span class="skill-chip">Figma</span>
+        <span class="skill-chip">Adobe XD</span>
+        <span class="skill-chip">HTML/CSS</span>
+        <span class="skill-chip">User Research</span>
+        <span class="skill-chip">Prototyping</span>
+      </div>
+    </div>
+
+    <div class="about-animation">
+      <lottie-player
+        src="https://assets1.lottiefiles.com/packages/lf20_iv4dsx3q.json"
+        background="transparent"
+        speed="1"
+        style="width: 400px; height: 400px;"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+    :root {
+      --primary: #14036b;
+      --secondary: #ff7a00;
+      --accent: #b22222;
+      --dark: #111;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background-color: #fff;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-flex {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: var(--primary);
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease, background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    
+    .main_page {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5% 10%;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+
+    .left_side_mp {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .left_side_mp h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+
+    .left_side_mp h1 .highlight {
+      color: var(--secondary);
+    }
+
+    .left_side_mp h4 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--gray);
+      font-weight: 400;
+    }
+
+    .prof_text {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .about-btn {
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(20, 3, 107, 0.3);
+    }
+
+    .about-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(20, 3, 107, 0.4);
+    }
+
+    .socio_buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--light);
+      color: var(--dark);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-5px);
+      color: white;
+    }
+
+    .fa-linkedin:hover { background: #0077b5; }
+    .fa-github:hover { background: #333; }
+    .fa-twitter:hover { background: #1da1f2; }
+    .fa-instagram:hover { background: #e4405f; }
+
+    
+    .right_side_main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #img2 {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    
+    @media (max-width: 992px) {
+      .main_page {
+        flex-direction: column;
+        text-align: center;
+        padding: 15% 5%;
+      }
+
+      .left_side_mp {
+        margin-bottom: 3rem;
+      }
+
+      .socio_buttons {
+        justify-content: center;
+      }
+
+      #img2 {
+        max-width: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      .left_side_mp h1 {
+        font-size: 2.5rem;
+      }
+    }
